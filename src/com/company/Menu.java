@@ -1,6 +1,5 @@
 package com.company;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -24,10 +23,10 @@ public class Menu {
 
             switch (respuesta) {
                 case 1:
-                    showMenuJugadores();
+                    menuJugadores();
                     break;
                 case 2:
-                    //acá iría el juego
+                    Juego.juego();
                     break;
                 case 3:
                     System.out.println("Hasta la próxima.");
@@ -41,7 +40,7 @@ public class Menu {
 
 
 
-    public static void showMenuJugadores() {
+    public static void menuJugadores() {
 
         int respuesta = 3;
 
@@ -77,7 +76,7 @@ public class Menu {
 
                     break;
                 case 2:
-                    showListaJugadores();
+                    listaJugadores();
                     break;
                 case 3:
                     mostrarMenu();
@@ -90,7 +89,7 @@ public class Menu {
 
     }
 
-    public static void showListaJugadores(){
+    public static void listaJugadores(){
 
         //System.out.println(jugadores.size());
 
@@ -127,7 +126,7 @@ public class Menu {
                         break;
                     }
                 case 3:
-                    showMenuJugadores();
+                    menuJugadores();
                     break;
                 default:
                     System.out.println("Por favor selecciona una opción.");
